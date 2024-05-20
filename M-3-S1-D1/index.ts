@@ -61,7 +61,7 @@ console.log(utente1.getNumeroChiamata());// Stampa il numero di minuti di chiama
 utente1.azzeraChimate(); //azzera numero chiamate
 console.log(utente1.getNumeroChiamata()) //numero chiamate post azzeramento
 
-
+/////////////////////////////////////
 
 const utente2 = new User ("Riccardino", "ciufolo");
 utente2.ricarica(45);
