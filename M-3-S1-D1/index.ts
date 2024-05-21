@@ -1,10 +1,10 @@
-interface Smartphone{
+interface iSmartphone{
 credito:number;
 numeroChiamate:number;
 }
 
 
-class User implements Smartphone {
+class User implements iSmartphone {
 credito: number;
 numeroChiamate: number;
 nome:string;
