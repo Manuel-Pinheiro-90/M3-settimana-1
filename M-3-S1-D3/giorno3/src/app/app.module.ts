@@ -8,7 +8,7 @@ import { InactivePostsComponent } from './component/inactive-posts/inactive-post
 import { PostDetailComponent } from './component/post-detail/post-detail.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { HomeComponent } from './component/home/home.component';
-import { ModelsComponent } from './models/models.component';
+
 
 
 
@@ -20,7 +20,7 @@ import { ModelsComponent } from './models/models.component';
     PostDetailComponent,
     NavbarComponent,
     HomeComponent,
-    ModelsComponent,
+
 
 
   ],
