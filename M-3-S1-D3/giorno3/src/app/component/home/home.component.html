@@ -2,21 +2,27 @@
   <div class="container">
     <h1>Articolo in evidenza</h1>
     <div class="row">
-      <div class="col-12">
-        <h3>{{ articleArr[0].title }}</h3>
-        <p>{{ articleArr[0].body }}</p>
+      <div class="col-12" id="featured-post" *ngIf="firstPost">
+        <h3>{{ firstPost.title }}</h3>
+        <p>{{ firstPost.body }}</p>
         <a href="">
-          {{ articleArr[0].tags }}
+          {{ firstPost.tags }}
         </a>
       </div>
     </div>
     <h4>articoli consigliati</h4>
-    <div class="row">
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col"></div>
+  </div>
+
+  <h2>Potrebbero piacerti questi posts</h2>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-3" *ngFor="let p of randomPosts">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.title }}</h5>
+          <p class="card-text">{{ p.body }}</p>
+          <p class="card-text">{{ p.tags }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </main>
-<a href=""></a>

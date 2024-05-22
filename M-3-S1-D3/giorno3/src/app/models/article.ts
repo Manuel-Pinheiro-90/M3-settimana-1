@@ -1,16 +1,9 @@
+import { iPost } from "./ipost"
 
-export interface iPost {
-  posts: iArticle[]
+export interface iArticle {
+  posts: iPost[]
   total: number
   skip: number
   limit: number
 }
 
-export interface iArticle {
-  id: number
-  title: string
-  body: string
-  userId: number
-  tags: string[]
-  active: boolean
-}
