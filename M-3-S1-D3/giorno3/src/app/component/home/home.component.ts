@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { iArticle } from '../../models/article';
+import { iArticle, iPost } from '../../models/article';
 
 @Component({
   selector: 'app-home',
@@ -19,11 +19,11 @@ articleArr:iArticle[]=[]
 
   async getArticle():Promise<void>{
 let response =await fetch ("../../../assets/db.json")
-let articles= <iArticle[]> await response.json()
-console.log(articles)
+let articles= <iPost> await response.json() //iPost è l'oggetto principale
+console.log("fino",articles)
 
 
-this.articleArr = articles
+this.articleArr = articles.posts //qui vado a recuperare l'array interno per usarlo
 
   }
 
