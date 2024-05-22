@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { iArticle } from '../../models/article';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,29 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+articleArr:iArticle[]=[]
+
+  ngOnInit(){
+
+    this.getArticle()
+
+
+  }
+
+  async getArticle():Promise<void>{
+let response =await fetch ("../../../assets/db.json")
+let articles= <iArticle[]> await response.json()
+
+
+this.articleArr = articles
+
+  }
+
+
+
+
+
+
 
 }
