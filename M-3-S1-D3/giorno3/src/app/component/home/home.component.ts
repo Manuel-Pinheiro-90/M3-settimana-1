@@ -16,9 +16,9 @@ firstPost!:iPost;
 
     this.getArticle().then(()=>{
 
-      let firstPost = this.getFirstPost()
+      let firstPost = this.getFirstPost() //esegue la funzione e recupara il primo
 
-      if(firstPost){
+      if(firstPost){ //se firstst post c'è allora diventa il primo elemento dell'array
         this.firstPost = firstPost
       }
 
@@ -45,12 +45,13 @@ console.log(this.articleArr)
 }
 
   getFirstPost(){
-    return this.articleArr.shift()
+    return this.articleArr.shift() //prende il primo elemento dell'array e lo rimuove ritornandolo
   }
 
+  //funzione che cicla l'array e restituisce 4 risultati
   getRandomPosts(): iPost[] {
-    const shuffled = [...this.articleArr].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 4);
+    const shuffled = [...this.articleArr].sort(() => 0.5 - Math.random()); //clono array e lo mescolo
+    return shuffled.slice(0, 4); //seleziono i primi 4 e li ritorno
   }
 
 
