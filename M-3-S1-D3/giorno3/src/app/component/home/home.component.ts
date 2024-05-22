@@ -20,6 +20,7 @@ articleArr:iArticle[]=[]
   async getArticle():Promise<void>{
 let response =await fetch ("../../../assets/db.json")
 let articles= <iArticle[]> await response.json()
+console.log(articles)
 
 
 this.articleArr = articles
