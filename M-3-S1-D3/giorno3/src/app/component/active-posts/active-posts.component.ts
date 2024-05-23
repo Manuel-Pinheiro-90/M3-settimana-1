@@ -13,8 +13,10 @@ export class ActivePostsComponent {
 
   constructor(private postsSvc: PostsService) {}
 
-  ngOnInit() { // Correzione di "ngOninit" in "ngOnInit"
-    this.activePostArr = this.postsSvc.getActiveArticles();
-    console.log('banana', this.activePostArr);
+  ngOnInit() { this.postsSvc.getArticle().then(()=>{  this.activePostArr = this.postsSvc.getActiveArticles();})
+
+
+
+
   }
 }

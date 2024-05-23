@@ -35,15 +35,6 @@ title:'active-posts'
   component: PostDetailComponent,
 }
 
-
-
-
-
-
-
-
-
-
 ];
 
 @NgModule({

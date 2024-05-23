@@ -12,8 +12,12 @@ export class InactivePostsComponent implements OnInit { // Implementazione di On
 
   constructor(private postsSvc: PostsService) {}
 
-  ngOnInit() { // Correzione di "ngOninit" in "ngOnInit"
-    this.inactivePostArr = this.postsSvc.getInactiveArticles();
-    console.log('banana', this.inactivePostArr);
+  ngOnInit() {
+    this.postsSvc.getArticle().then (() => {
+      this.inactivePostArr = this.postsSvc.getInactiveArticles();
+
+    })
+
+
   }
 }
