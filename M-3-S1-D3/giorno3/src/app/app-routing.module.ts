@@ -22,9 +22,28 @@ title:'active-posts'
   component: InactivePostsComponent,
 },
 
-{path:'post-detail',
+{path:'active-posts/:id',
+  component: PostDetailComponent,
+},
+
+{path:'inactive-posts/:id',
+  component: PostDetailComponent,
+},
+
+
+{path:'home/:id',
   component: PostDetailComponent,
 }
+
+
+
+
+
+
+
+
+
+
 ];
 
 @NgModule({

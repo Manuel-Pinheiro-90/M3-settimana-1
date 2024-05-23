@@ -44,7 +44,7 @@ export class PostsService {
 
   // Metodo per ottenere un articolo tramite il suo ID
   getByid(id: number): iPost | undefined {
-    return this.articleArr.find(apost => apost.id === id);
+    return this.articleArr.find(apost => apost.id == id);
   }
 }
 
