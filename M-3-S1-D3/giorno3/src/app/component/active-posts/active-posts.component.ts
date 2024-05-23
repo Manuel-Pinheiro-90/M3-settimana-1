@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { iPost } from '../../models/ipost';
+import { PostsService } from '../../service/posts.service';
 
 @Component({
   selector: 'app-active-posts',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class ActivePostsComponent {
 
+  activePostArr: iPost[] = [];
+
+  constructor(private postsSvc: PostsService) {}
+
+  ngOnInit() { // Correzione di "ngOninit" in "ngOnInit"
+    this.activePostArr = this.postsSvc.getActiveArticles();
+    console.log('banana', this.activePostArr);
+  }
 }

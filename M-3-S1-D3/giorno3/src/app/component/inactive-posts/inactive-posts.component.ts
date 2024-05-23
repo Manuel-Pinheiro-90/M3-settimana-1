@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { iPost } from '../../models/ipost';
+import { PostsService } from '../../service/posts.service';
 
 @Component({
   selector: 'app-inactive-posts',
   templateUrl: './inactive-posts.component.html',
-  styleUrl: './inactive-posts.component.scss'
+  styleUrls: ['./inactive-posts.component.scss'] // Correzione di "styleUrl" in "styleUrls"
 })
-export class InactivePostsComponent {
+export class InactivePostsComponent implements OnInit { // Implementazione di OnInit
+  inactivePostArr: iPost[] = [];
 
+  constructor(private postsSvc: PostsService) {}
+
+  ngOnInit() { // Correzione di "ngOninit" in "ngOnInit"
+    this.inactivePostArr = this.postsSvc.getInactiveArticles();
+    console.log('banana', this.inactivePostArr);
+  }
 }

@@ -5,8 +5,14 @@
       <div class="col-12 bg-secondary text-white p-5" *ngIf="firstPost">
         <h3>{{ firstPost.title }}</h3>
         <p>{{ firstPost.body }}</p>
-        <a href="#" class="link-light">
-          {{ firstPost.tags }}
+        <a href="#" class="link-light mx-2">
+          {{ firstPost.tags[0] }}
+        </a>
+        <a href="#" class="link-light mx-2">
+          {{ firstPost.tags[1] }}
+        </a>
+        <a href="#" class="link-light mx-2">
+          {{ firstPost.tags[2] }}
         </a>
       </div>
     </div>
