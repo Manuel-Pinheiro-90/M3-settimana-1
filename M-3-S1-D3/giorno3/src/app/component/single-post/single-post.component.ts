@@ -13,7 +13,10 @@ singlePostArray: iPost[]=[];
 
 @Input() p!: iPost;
 
+show:boolean=false
 
+
+toggleForm(){this.show=!this.show} //metodo per cambiare il valore di show per renderlo invisibile
 
 
 
