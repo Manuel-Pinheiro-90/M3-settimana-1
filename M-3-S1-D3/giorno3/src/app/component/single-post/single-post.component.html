@@ -1,0 +1,14 @@
+<div class="card h-100" [ngClass]="{ 'border-primary': p.active }">
+  <div class="card-body d-flex flex-column justify-content-between">
+    <h5 class="card-title">{{ p.title }}</h5>
+    <p class="card-text">{{ p.body }}</p>
+    <div class="d-flex">
+      <a href="#" class="card-text mx-2">{{ p.tags[0] }}</a>
+      <a href="#" class="card-text mx-2">{{ p.tags[1] }}</a>
+      <a href="#" class="card-text mx-2">{{ p.tags[2] }}</a>
+    </div>
+    <a [routerLink]="[p.id]" class="btn btn-primary">Go somewhere</a>
+    <ng-content></ng-content>
+    <!--qui faccio spownare il form scritto in home-->
+  </div>
+</div>

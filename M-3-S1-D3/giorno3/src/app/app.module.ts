@@ -8,6 +8,8 @@ import { InactivePostsComponent } from './component/inactive-posts/inactive-post
 import { PostDetailComponent } from './component/post-detail/post-detail.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { HomeComponent } from './component/home/home.component';
+import { SinglePostComponent } from './component/single-post/single-post.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,13 +22,16 @@ import { HomeComponent } from './component/home/home.component';
     PostDetailComponent,
     NavbarComponent,
     HomeComponent,
+    SinglePostComponent,
 
 
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+FormsModule   //aggiungere per mettere form
+
   ],
   providers: [],
   bootstrap: [AppComponent]

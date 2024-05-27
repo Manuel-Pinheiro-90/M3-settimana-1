@@ -13,10 +13,10 @@ export class ActivePostsComponent {
 
   constructor(private postsSvc: PostsService) {}
 
-  ngOnInit() { this.postsSvc.getArticle().then(()=>{  this.activePostArr = this.postsSvc.getActiveArticles();})
+  ngOnInit() {  this.activePostArr = this.postsSvc.getActiveArticles();}
 
 
 
 
   }
-}
+

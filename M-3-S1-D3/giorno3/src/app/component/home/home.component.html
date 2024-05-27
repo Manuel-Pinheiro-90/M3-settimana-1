@@ -15,6 +15,7 @@
           {{ firstPost.tags[2] }}
         </a>
       </div>
+      <a [routerLink]="[firstPost.id]" class="btn btn-primary">Go somewhere</a>
     </div>
     <h4>articoli consigliati</h4>
 
@@ -35,6 +36,31 @@
             </div>
             <a [routerLink]="[post.id]" class="btn btn-primary">Go somewhere</a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center my-5 text-white">Tutti gli articoli</h2>
+    <h1>single post</h1>
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-12 col-md-6 col-lg-3 border"
+          *ngFor="let p of articleArr"
+        >
+          <app-single-post [p]="p">
+            <!--roba per riempire il saingle post-->
+            <form>
+              <input
+                type="text"
+                class="form-control"
+                name="titolo"
+                placeholder="Odio"
+                [(ngModel)]="p.title"
+              />
+              <!--passo il titolo al single post e riempio il form -->
+            </form>
+          </app-single-post>
         </div>
       </div>
     </div>

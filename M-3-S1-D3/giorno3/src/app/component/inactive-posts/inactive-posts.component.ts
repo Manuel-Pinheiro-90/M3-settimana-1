@@ -13,11 +13,11 @@ export class InactivePostsComponent implements OnInit { // Implementazione di On
   constructor(private postsSvc: PostsService) {}
 
   ngOnInit() {
-    this.postsSvc.getArticle().then (() => {
+
       this.inactivePostArr = this.postsSvc.getInactiveArticles();
 
-    })
+    }
 
 
   }
-}
+
